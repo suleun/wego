@@ -21,8 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/wego/login', function () {
-    return view('front/login');
+Route::get('/wego/main', function () {
+    return view('front/main');
 });
 
 require __DIR__.'/auth.php';

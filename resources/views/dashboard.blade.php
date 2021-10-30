@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+                    메인페이지로 쓸랭, 여기는 마이페이지에요 하이~
                 </div>
             </div>
         </div>
