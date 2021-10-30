@@ -13,8 +13,21 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('내 정보') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('makeProject')" :active="request()->routeIs('makeProject')">
+                        {{ __('프로젝트 생성') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('projectList')" :active="request()->routeIs('projectList')">
+                        {{ __('진행 중인 프로젝트') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('minutesList')" :active="request()->routeIs('minutesList')">
+                        {{ __('회의록') }}
+                    </x-nav-link>
+
                 </div>
             </div>
 
@@ -64,7 +77,19 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('내 정보') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('makeProject')" :active="request()->routeIs('makeProject')">
+                {{ __('프로젝트 생성') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('projectList')" :active="request()->routeIs('projectList')">
+                {{ __('진행중인 프로젝트') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('minutesList')" :active="request()->routeIs('minutesList')">
+                {{ __('회의록') }}
             </x-responsive-nav-link>
         </div>
 

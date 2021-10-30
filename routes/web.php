@@ -23,6 +23,23 @@ Route::get('/dashboard', function () {
 
 Route::get('/wego/main', function () {
     return view('front/main');
-});
+})->name('main');
+
+Route::post('/wego/makeProject', function () {
+    return view('front/makeProject');
+})->name('makeProject');
+
+Route::get('/wego/projectList', function () {
+    return view('front/projectList');
+})->name('projectList');
+
+Route::get('/wego/minutesList', function () {
+    return view('front/minutesList');
+})->name('minutesList');
+
+Route::post('/wego/makeMinutes', function () {
+    return view('front/makeMinutes');
+})->name('makeMinutes');
+
 
 require __DIR__.'/auth.php';
