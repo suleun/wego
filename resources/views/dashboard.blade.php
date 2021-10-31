@@ -1,8 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+       
     </x-slot>
 
     <div class="py-12">
@@ -10,32 +8,60 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     
-                    
-                    메인페이지로 쓸랭, 여기는 마이페이지에요 하이~
-
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start" alt="...">
-                          </div>
-                          <div class="col-md-8">
+                        <!-- 사진 -->
+                        <img src="\image\sosoeueunOctocat" class="rounded mx-auto d-block" alt="이미지를 찾을 수 없습니다.">
+                
+                        <!-- 내용 -->
+                   
                             <div class="card-body">
-                              <h5 class="card-title">사용자 이름</h5>
+                                {{-- 로그인한 사용자 이름 값을 받아와 넣어야 함 --}}
+                                <h5 class="card-title">{{ auth()->user()->name }}</h5>
 
-                              <p class="card-text">사용자 자기 소개</p>
 
-                              <p class="card-text">주로 맡는 역할</p>
-                              
-                              <p class="card-text">연락처</p>
-
+                                <div>
+                                  <form action="">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">
+                                            자기소개
+                                        </label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="formGroupExampleInput"
+                                            placeholder="자신을 자유롭게 표현해봐요!">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">연락처</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="formGroupExampleInput2"
+                                            placeholder="블로그 주소나, 연락처를 적어주세요!">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">기술</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="formGroupExampleInput2"
+                                            placeholder="자신이 사용 할 수 있는 기술을 적어주세요!">
+                                    </div>
+                                    <div class="col-auto my-1">
+                                        <button type="submit" class="btn btn-primary">저장</button>
+                                      </div>
+                          
+                                </form>
+                                </div>
+                
                             </div>
-                          </div>
                         </div>
-                      </div>
 
 
                 </div>
             </div>
         </div>
     </div>
+
+
 </x-app-layout>

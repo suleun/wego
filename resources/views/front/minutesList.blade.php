@@ -1,8 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+        
     </x-slot>
 
     <div class="py-12">
@@ -12,7 +10,7 @@
                     
                     
            여기는 회의록 리스트에요 하이~
-           
+
                 </div>
             </div>
         </div>
