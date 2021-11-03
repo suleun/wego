@@ -25,7 +25,7 @@ Route::get('/wego/main', function () {
     return view('front/main');
 })->name('main');
 
-Route::post('/wego/makeProject', function () {
+Route::get('/wego/makeProject', function () {
     return view('front/makeProject');
 })->name('makeProject');
 
@@ -43,3 +43,6 @@ Route::post('/wego/makeMinutes', function () {
 
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -11,6 +11,8 @@
                     
            여기는 회의록 리스트에요 하이~
 
+           <button type="button" class="btn btn-primary">회의록 작성
+           </button>
                 </div>
             </div>
         </div>
